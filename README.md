@@ -2,7 +2,7 @@
 
 
 ---
-**By: Victor Belei, Nathan Lee, and Jorge Ramos** 
+**By: Victor Belei, Nathan Lee, and Jorge Ramos**
 
 
 ## Defining the Problem
@@ -95,6 +95,9 @@ In order to make up for the weaknesses of a content-based recommender the most l
 ### Conclusions:
 With our combined effort, this is a good first step in creating a one-stop shop for disaster data. The word2vec search engine combined with a recommender system will pull up relevant data with similar efficiency to Google’s search engine. It allows the user to input keywords that correspond to keywords of relevant articles, which is an increased functional component not seen from past attempts. However, there is always room for improvement and there are many "Next Steps" that would increase the user's experience and site functionality.
 
+### Word vectors
+**To be able to use this codes, download:**
+[Word Vectors](https://www.dropbox.com/s/kguufyc2xcdi8yk/lexvec.enwiki%2Bnewscrawl.300d.W.pos.vectors.gz?dl=1)
 
 ### Sources and References:
 
