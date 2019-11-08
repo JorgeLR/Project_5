@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+    <!-- Especifies the character encoding for the HTML document -->
+    <!-- Character encoding for Unicode  -->
+    <meta charset="utf-8">
+    <!-- Responsive viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" <type="text/css" href="{{ url_for('static', filename='main.css')}}">
+
+    {% if title %}
+      <title>Disaster Situational Awareness - {{ title }}</title>
+    {% else %}
+      <title>Disaster Situational Awareness</title>
+    {% endif %}
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark navbar_bkgd_color fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="/">Disaster Situational Awareness</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <!-- Navbar Left Side -->
+              <!-- Disaster list in Nav Bar -->
+              <!-- <ul>
+                <li><a href="#">Disaster</a>
+                  <ul>
+                    <li><a class="nav-item nav-drop" href="/wildfire">Wildfire</a></li>
+                    <li><a class="nav-item nav-drop" href="/tornado">Tornado</a></li>
+                    <li><a class="nav-item nav-drop" href="/flood">Flood</a></li>
+                    <li><a class="nav-item nav-drop" href="/earthquake">Earthquake</a></li>
+                    <li><a class="nav-item nav-drop" href="/blizzard">Blizzard</a></li>
+                  </ul>
+                </li>
+              </ul> -->
+              <!-- Search bar and search button -->
+              <!-- <input type="text" name="disaster_search">
+              <form action="/wildfire" method="get">
+                  <input type="submit" value="Submit" name="Submit" id="frm1_submit" />
+              </form> -->
+              <!-- Search bar and search button -->
+              <form method="POST">
+                  <input name="variable">
+                  <input type="submit">
+              </form>
+              <!-- <a class="nav-item nav-link" href="/">Home</a> -->
+              <!-- <a class="nav-item nav-link" href="/about">About</a> -->
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="/about">About</a>
+              <!-- <a class="nav-item nav-link" href="/login">Login</a>
+              <a class="nav-item nav-link" href="/register">Register</a> -->
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8">
+          {% block content %}{% endblock %}
+        </div>
+        <div class="col-md-4">
+          <div class="content-section">
+            <h3>Disaster List</h3>
+            <p class='text-muted'>This is a list of possible natural disasters that you can look into.
+              <ul class="list-group" style="list-style: none;">
+                <li><a class="list-group-item list-group-item-light" href="/wildfire">Wildfire</a></li>
+                <li><a class="list-group-item list-group-item-light" href="/tornado">Tornado</a></li>
+                <li><a class="list-group-item list-group-item-light" href="/flood">Flood</a></li>
+                <li><a class="list-group-item list-group-item-light" href="/earthquake">Earthquake</a></li>
+                <li><a class="list-group-item list-group-item-light" href="/blizzard">Blizzard</a></li>
+                <li><a class="list-group-item list-group-item-light" href="/hurricane">Hurricane</a></li>
+              </ul>
+              <br>
+              <a class="news_api" href="https://newsapi.org">Powered by News API</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

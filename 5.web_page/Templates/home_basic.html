@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Leveraging News and Media for Situational Awareness</h1>
+    {% for new in news %}
+        <h3>{{ new.title }}</h3>
+        <p>By {{ new.source }} on {{ new.date_posted}}</p>
+        <p>{{ new.content }}</p>
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Hurricane Situational Awareness</h1>
+    {% for new in news_hurr %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href={{new.url_main}}>{{ new.author }}</a>
+              <small class="text-muted">{{ new.pub_date }}</small>
+            </div>
+            <h2><a class="article-title" href={{new.url}}>{{ new.title }}</a></h2>
+            <p class="article-content">{{ new.description }}</p>
+            <img src={{new.photo_url}} width="100%" height="auto">
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

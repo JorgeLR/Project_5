@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="home">
+      <h1>Situational Awareness</h1>
+      <h3>Wildfire</h3>
+    </div>
+    {% for new in home_fire %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href={{new.url_main}}>{{ new.author }}</a>
+              <small class="text-muted">{{ new.pub_date }}</small>
+            </div>
+            <h2><a class="article-title" href={{new.url}}>{{ new.title }}</a></h2>
+            <!-- <p class="article-content">{{ new.content }}</p> -->
+          </div>
+        </article>
+    {% endfor %}
+    <div class="home">
+      <h3>Tornado</h3>
+    </div>
+    {% for new in home_torn %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href={{new.url_main}}>{{ new.author }}</a>
+              <small class="text-muted">{{ new.pub_date }}</small>
+            </div>
+            <h2><a class="article-title" href={{new.url}}>{{ new.title }}</a></h2>
+            <!-- <p class="article-content">{{ new.content }}</p> -->
+          </div>
+        </article>
+    {% endfor %}
+    <div class="home">
+      <h3>Flood</h3>
+    </div>
+    {% for new in home_flood %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href={{new.url_main}}>{{ new.author }}</a>
+              <small class="text-muted">{{ new.pub_date }}</small>
+            </div>
+            <h2><a class="article-title" href={{new.url}}>{{ new.title }}</a></h2>
+            <!-- <p class="article-content">{{ new.content }}</p> -->
+          </div>
+        </article>
+    {% endfor %}
+    <div class="home">
+      <h3>Earthquake</h3>
+    </div>
+    {% for new in home_earth %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href={{new.url_main}}>{{ new.author }}</a>
+              <small class="text-muted">{{ new.pub_date }}</small>
+            </div>
+            <h2><a class="article-title" href={{new.url}}>{{ new.title }}</a></h2>
+            <!-- <p class="article-content">{{ new.content }}</p> -->
+          </div>
+        </article>
+    {% endfor %}
+    <div class="home">
+      <h3>Blizzard</h3>
+    </div>
+    <div class="no_post">
+      <p>There are no recent articles concerning blizzards</p>
+    </div>
+    <div class="home">
+      <h3>hurricane</h3>
+    </div>
+    {% for new in home_hurr %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href={{new.url_main}}>{{ new.author }}</a>
+              <small class="text-muted">{{ new.pub_date }}</small>
+            </div>
+            <h2><a class="article-title" href={{new.url}}>{{ new.title }}</a></h2>
+            <!-- <p class="article-content">{{ new.content }}</p> -->
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
