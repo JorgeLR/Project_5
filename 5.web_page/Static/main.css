@@ -26,45 +26,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
-/* Drop down menu in Nav Bar */
-/* nav div div div ul {
-  float: left;
-}
-nav div div div ul li {
-  float: left;
-  list-style: none;
-  position: relative;
-}
-nav div div div ul li a {
-  display: block;
-  color: #cbd5db;
-}
-nav div div div ul li a:hover {
-  color: #ffffff;
-  text-decoration: none;
-}
-nav div div div ul li ul {
-  display: none;
-  position: absolute;
-  background-color: #13153b;
-  padding: 8px;
-  border-radius: 0px 0px 6px 6px;
-}
-nav div div div ul li:hover ul {
-  display: block;
-}
-nav div div div ul li ul li{
-  border-radius: 4px;
-}
-.site-header .navbar-nav .nav-drop {
-  color: #cbd5db;
-}
-.site-header .navbar-nav .nav-drop:hover {
-  color: #ffffff;
-  text-decoration: none;
-} */
-/* Drop down menu in Nav Bar */
-
 .news_api {
   padding: 8px;
 }
@@ -123,15 +84,4 @@ a.article-title:hover {
   width: 25px;
   height: 25px;
   vertical-align: middle;
-}
-
-.account-img {
-  height: 125px;
-  width: 125px;
-  margin-right: 20px;
-  margin-bottom: 16px;
-}
-
-.account-heading {
-  font-size: 2.5rem;
 }

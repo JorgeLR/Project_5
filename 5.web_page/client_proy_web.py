@@ -58,21 +58,6 @@ news_hurr = pd.read_csv("../3.final_data/hurricane_comb.csv")
 news_hurr["url_main"] = news_hurr["url"].map(get_url)
 news_hurr = news_hurr.to_dict('records')
 
-# [
-#     {
-#         'source': 'The New York Times',
-#         'title': 'Earthquake in Boston',
-#         'content': 'Whatever describes this news',
-#         'date_posted': 'April 20, 2019'
-#     },
-#     {
-#         'source': 'The New York Times',
-#         'title': 'Flood in Florida',
-#         'content': 'Whatever describes this news',
-#         'date_posted': 'June 20, 2019'
-#     }
-# ]
-
 model = gensim.models.KeyedVectors.load_word2vec_format('../lexvec.enwiki+newscrawl.300d.W.pos.vectors')
 
 def art_test(df, vars):
@@ -131,13 +116,6 @@ def hurricane():
 @app.route('/', methods=['POST'])
 def my_form_post():
     variable = request.form['variable']
-    # Create search CSV based on variable input by user
-    # Quick Search
-    # df = pd.read_csv("../3.final_data/mega_data.csv")
-    # df = df.loc[df["title"].notnull()]
-    # df = df.loc[df["title"].str.contains(variable)]
-    # df.to_csv("../4.search/search.csv", index= False)
-    # End of quick Search
     search_df = pd.read_csv('../3.final_data/mega_data.csv')
     search_list = art_test(search_df, variable)
     search_df["final_list"] = search_df["title"].map(lambda x: 1 if x in search_list else 0)
